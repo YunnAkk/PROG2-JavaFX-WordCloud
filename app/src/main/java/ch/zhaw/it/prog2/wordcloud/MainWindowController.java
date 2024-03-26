@@ -27,20 +27,17 @@ public class MainWindowController {
 
     @FXML
     private void initialize() {
-        labelTitle.textProperty().bind(titleText);
-        titleText.bind(textEntry.textProperty());
+        labelTitle.textProperty().bind(textEntry.textProperty());
     }
 
     @FXML
     void addText(ActionEvent event) {
-        String text = textEntry.getText();
-        if (!text.isEmpty()) {
-            textHistory.appendText(text + "\n");
-        }
+        textHistory.appendText(textEntry.getText() + System.lineSeparator());
     }
 
     @FXML
     void clearTextEntry(ActionEvent event) {
         textEntry.clear();
     }
+
 }

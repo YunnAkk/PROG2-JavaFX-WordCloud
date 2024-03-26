@@ -18,20 +18,12 @@ public class MainWindow extends Application {
     private void openMainWindow(Stage stage) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
         Pane rootNode = loader.load();
+
         Scene scene = new Scene(rootNode);
         stage.setScene(scene);
+        stage.setMinHeight(200);
+        stage.setMinWidth(300);
         stage.show();
     }
-
-
-
-
-
-
-
-
-
-
-
 
 }
